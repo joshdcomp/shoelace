@@ -1,0 +1,16 @@
+$_media:(
+    'small': 500px,
+    'medium': 770px,
+    'large': 900px,
+    'x-large': 1200px,
+);
+@function get_media($size){
+    @if(map-has-key($_media, $size)){
+        @return map-get($_media, $size);
+    }
+    @else{
+        @warn "#{$size} isn't in $_media, refer to `sass/config/media-queries` for a list of available options";
+        @debug "Current options in $_media are: #{map-keys($_media)}.";
+        @return false;
+    }
+}

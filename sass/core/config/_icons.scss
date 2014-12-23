@@ -1,0 +1,14 @@
+$_icons: (
+    'beard': '\f231';
+);
+
+@function _icon($name){
+    @if(map-has-key($_icons, $name)){
+        @return map-get($_icons, $name);
+    }
+    @else{
+        @warn "#{$name} isn't in $_icons.";
+        @debug "Current options for icons are: #{map-keys($_icon)}. Icons live at `sass/config/icons`";
+        @return false;
+    }
+}
