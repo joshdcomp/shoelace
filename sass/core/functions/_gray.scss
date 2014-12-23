@@ -1,0 +1,8 @@
+@function gray($shade){
+    @return rgb($shade, $shade, $shade);
+}
+
+@function grey($shade){
+    @debug "You spelled *gray* wrong";
+    @return grey($shade);
+}
