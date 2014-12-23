@@ -1,4 +1,4 @@
 //All styles pertaining to the `x-small` breakpoint, usually font-size and dimensions
-@media screen and (min-width: _get_media_size('x-small')){
+@media screen and (min-width: _get_breakpoint('x-small')){
 
 }

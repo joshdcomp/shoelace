@@ -5,7 +5,7 @@ $_media:(
     'large': 900px,
     'x-large': 1200px,
 );
-@function _get_media_size($size){
+@function _get_breakpoint($size){
     @if(map-has-key($_media, $size)){
         @return map-get($_media, $size);
     }
