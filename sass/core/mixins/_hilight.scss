@@ -1,0 +1,22 @@
+//------------------------------------------------------------------------------
+//-- @mixin  hilight sets styling for selected text, automatically removes
+//           text shadow
+//--- @param bgColor color background color for selected text
+//--- @param color color @default: white text color for selected text
+//--- @param selector selector @default: body scoping selector for the
+//           selected text
+// -----------------------------------------------------------------------------
+@mixin hilight($bgColor, $color: #fff, $selector: body) {
+// TODO dynamically choose the defauly text color based on the shade of bgcolor
+    #{$selector}::-moz-selection {
+        background: $bgColor;
+        color: $color;
+        text-shadow: none;
+    }
+
+    #{$selector}::selection {
+        background: $bgColor;
+        color: $color;
+        text-shadow: none;
+    }
+}
