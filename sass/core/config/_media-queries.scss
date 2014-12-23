@@ -1,10 +1,11 @@
 $_media:(
+    'x-small': 300px,
     'small': 500px,
     'medium': 770px,
     'large': 900px,
     'x-large': 1200px,
 );
-@function get_media($size){
+@function _get_media_size($size){
     @if(map-has-key($_media, $size)){
         @return map-get($_media, $size);
     }
