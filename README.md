@@ -1,6 +1,6 @@
 OOhSASS
 =======
-This is my take on OOCSS, the idea being that managing styles for things like media queries, z-indices, colors, dimensions, and adding new UI components should have very little overhead involved.
+My take on OOCSS, emphasis on mitigating overhead for managing styles for things like media queries, z-indices, colors, dimensions, and adding new UI components.
 
 Files are split into `core`, `legacy`, `lib`, and `vend` directories.
 
