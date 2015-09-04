@@ -1,15 +1,5 @@
-// Functions agnostic of variables
-@import "core/functions/index";
-
-// Variables their accompanying helper functions
-@import "core/config/index";
-
-// Mixins (includes the scaffolding engine)
-@import "core/mixins/index";
-
-// Reset and helper classes
-@import "core/meyer-reset";
-@import "core/helper-classes";
+// Colors, typography, media queries, mixins, functions, etc
+@import "core/index";
 
 // Old busted hotness
 @import "legacy/index";
