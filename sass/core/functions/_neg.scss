@@ -1,0 +1,6 @@
+///
+// Casts a number as negative
+//
+@function _neg($val){
+    @return $val * -1;
+}
