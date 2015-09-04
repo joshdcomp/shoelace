@@ -1,4 +1,0 @@
-@function em($px, $base: 16px){
-    //TODO: see about stripping unit from $px
-    @return #{$px/$base}em;
-}

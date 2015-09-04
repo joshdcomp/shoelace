@@ -1,17 +1,16 @@
-$_media:(
-    'x-small': 300px,
-    'small': 500px,
-    'medium': 770px,
-    'large': 900px,
-    'x-large': 1200px,
+$_mqs:(
+    'x-small' : 100px,
+    'small'   : 320px,
+    'medium'  : 700px,
+    'large'   : 1024px,
+    'x-large' : 1200px,
+    'xx-large': 1650px,
 );
-@function _get_breakpoint($size){
-    @if(map-has-key($_media, $size)){
-        @return map-get($_media, $size);
-    }
-    @else{
-        @warn "#{$size} isn't in $_media, refer to `sass/config/media-queries` for a list of available options";
-        @debug "Current options in $_media are: #{map-keys($_media)}.";
-        @return false;
-    }
-}
+
+// short versions
+$_mq-xs: _get($_mqs, 'x-small');
+$_mq-s: _get($_mqs, 'small');
+$_mq-m: _get($_mqs, 'medium');
+$_mq-l: _get($_mqs, 'large');
+$_mq-xl: _get($_mqs, 'x-large');
+$_mq-xxl: _get($_mqs, 'xx-large');

@@ -1,25 +1,24 @@
-$_helvetica: (
-    'font-family': #{"Helvetica", sans-serif},
-    'font-weight': 300,
-    'line-height': 1.3,
-    'letter-spacing': '1px',
-    'color': $fontColor,
+// Shoelace Fonts
+$_montserrat: (
+    'font-family': #{'Montserrat', sans-serif},
+    'font-weight': (
+        'normal': 400,
+        'bold': 700,
+    ),
 );
 
-@function _get_font_prop($font: $_helvetica, $property){
-    //check to see if the passed font exists
-    @if(!global-variable-exists($font)){
-        @warn "#{$font} doesn't exist. Refer to `sass/config/typography` for available fonts.";
-        @return false;
-    }
+$_openSans: (
+    'font-family' : #{'Open Sans', sans-serif},
+    'font-weight': (
+        'light': 300,
+        'normal': 400,
+        'semi-bold': 600,
+    ),
+);
 
-    //check to see if the property key passed resolves to a value
-    @if(map-has-key($font, $property)){
-        @return map-get($font, $property);
-    }
-    @else{
-        @warn "#{$property} doesn't exist in #{$font}. See all fonts and their properties at `sass/config/typography`.";
-        @debug "Current font property options for #{$font} are: #{map-keys($font)}.";
-        @return false;
-    }
-}
+$t-header-ff: _get($_montserrat, 'font-family');
+$t-header-fw: _get($_montserrat, 'font-weight', 'bold');
+
+$t-text-ff: _get($_openSans, 'font-family');
+$t-text-fw: _get($_openSans, 'font-weight', 'normal');
+$t-text-bold-fw: _get($_openSans, 'font-weight', 'bold');

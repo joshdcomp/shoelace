@@ -1,20 +1,23 @@
-$_red: rgb(250, 100, 100) !default;
-$_green: rgb(100, 250, 100) !default;
-$_blue: rgb(100, 100, 250) !default;
+/// Named color values, should only be mentioned in config.scss files
+// Shoelace Defaults
+$_red:      rgb(250, 100, 100) !default;
+$_green:    rgb(100, 250, 100) !default;
+$_blue:     rgb(100, 100, 250) !default;
 
-$_orange: rgb(250, 140, 100) !default;
-$_purple: rgb(180, 100, 250) !default;
-$_yellow: rgb(250, 225, 100) !default;
+$_orange:   rgb(250, 140, 100) !default;
+$_purple:   rgb(180, 100, 250) !default;
+$_yellow:   rgb(250, 225, 100) !default;
 
-$_black: gray(0) !default;
+$_black:    gray(0) !default;
+$_white:    gray(250) !default;
 
-$_gray1: gray(50) !default;
-$_gray2: gray(100) !default;
-$_gray3: gray(150) !default;
-$_gray4: gray(200) !default;
+$_gray1:    gray(51) !default;
+$_gray2:    gray(100) !default;
+$_gray3:    gray(150) !default;
+$_gray4:    gray(205) !default;
 
-$_white: gray(250) !default;
-
-$_textColor: $gray1 !default;
-$_primaryColor: $blue !default;
-$_secondaryColor: $gray2 !default;
+/// Color assignments for global elements
+// Defaults for use in the styles
+$c-text:      $_gray4;
+$c-primary:   $_blue;
+$c-secondary: $_gray2;
