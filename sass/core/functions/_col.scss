@@ -1,0 +1,8 @@
+/// Returns a px-based column width given the span, single col width and gutter
+//
+///@param int required $colSpan number of columns this item will span
+///@param int optional $colWidth width of a single column
+///@param int optional $gutter width of a gutter
+@function _col($colSpan, $colWidth: 340, $gutter: 10){
+    @return #{($colSpan * $colWidth) + ($gutter * ($colSpan - 1) )}px;
+}
