@@ -1,0 +1,7 @@
+//All styles pertaining to the `medium` breakpoint, usually font-size and dimensions
+@media screen and (min-width: $_mq-m - 1px){
+    .mobile-only {
+        display: none !important;
+        visibility: hidden;
+    }
+}
