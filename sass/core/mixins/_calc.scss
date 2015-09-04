@@ -1,0 +1,5 @@
+@mixin _calc($property, $expression, $fallback) {
+    // #{$property}: $fallback;
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: calc(#{$expression});
+}
